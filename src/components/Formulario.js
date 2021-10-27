@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import Error from './Error.js'
+import shortid from 'shortid';
 // import PropTypes from 'prop-types'
 
 const Formulario = props => {
@@ -19,7 +20,13 @@ const Formulario = props => {
 		} else guardarError(false)
 
 		// Contruir
+		const gasto = {
+			nombre,
+			cantidad,
+			id: shortid.generate()
+		}
 
+		console.log(gasto)
 		// Pasar
 
 		// Resetear
@@ -28,13 +35,13 @@ const Formulario = props => {
 
 	return (
 		<React.Fragment>
-		<form 
+		<form
 			onSubmit={agregarGasto}
 			className="form-group"
 		>
 			<h2>Agrega tus gastos aqui</h2>
-			{ error ? 
-				<Error 
+			{ error ?
+				<Error
 					mensaje="Campos obligatorios y/o gasto positivo"
 				/> :  null }
 			<div className="campo">
@@ -63,8 +70,8 @@ const Formulario = props => {
 				/>
 			</div>
 
-			<button 
-				type="submit" 
+			<button
+				type="submit"
 				className="btn btn-secondary w-100"
 				value="Agregar gasto"
 			>Submit
