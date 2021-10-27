@@ -5,8 +5,8 @@
 }
 body {
   background: #000428;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #004e92, #000428);  
-  background: linear-gradient(to right, #004e92, #000428); 
+  background: -webkit-linear-gradient(to right, #004e92, #000428);
+  background: linear-gradient(to right, #004e92, #000428);
   margin: 0;
   padding: 0;
   font-family: sans-serif;
@@ -55,7 +55,7 @@ h2 {
 .error {
   text-align: center;
 }
-.alert {
+/*.alert {
   position: relative;
   padding: .75rem 1.25rem;
   margin-bottom: 1rem;
@@ -81,7 +81,7 @@ h2 {
   color: #856404;
   background-color: #fff3cd;
   border-color: #ffeeba;
-}
+}*/
 .gastos-realizados  {
   margin-bottom: 2rem;
 }

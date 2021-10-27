@@ -3,7 +3,7 @@ import Error from './Error.js'
 import shortid from 'shortid';
 // import PropTypes from 'prop-types'
 
-const Formulario = props => {
+const Formulario = ({guardarGasto, guardarCrearGasto}) => {
 
 	// definir state
 	const [nombre, guardarNombre] = useState('');
@@ -25,11 +25,13 @@ const Formulario = props => {
 			cantidad,
 			id: shortid.generate()
 		}
-
-		console.log(gasto)
 		// Pasar
+		guardarGasto(gasto);
+		guardarCrearGasto(true);
 
 		// Resetear
+		guardarNombre('');
+		guardarCantidad(0);
 	}
 
 
