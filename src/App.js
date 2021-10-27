@@ -31,7 +31,7 @@ function App() {
       // Resetear
       guardarCrearGasto(false);
     }
-  }, [gasto])
+  }, [gasto, creargasto, gastos, restante])
 
   return (
     <div className="container">
